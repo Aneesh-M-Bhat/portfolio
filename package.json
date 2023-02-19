@@ -1,6 +1,7 @@
 {
   "name": "pf",
   "version": "0.1.0",
+  "homepage": "https://aneesh-m-bhat.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
