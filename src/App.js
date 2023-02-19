@@ -1,5 +1,5 @@
 import Project from "./components/Project";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Skill from "./components/Skill";
 import H2 from "./components/H2";
 import texts from "./texts.json";
@@ -198,9 +198,16 @@ function App() {
                   })}
               </div>
             </div>
-            <div className="container">
-              <button></button>
-            </div>
+            {/* <div className="container flex flex-row w-1/3 h-4 mx-auto">
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto"></button>
+              <button className="bg-l4 text-l4 rounded-full px-2 mx-auto "></button>
+            </div> */}
           </div>
         )}
       />
