@@ -5,9 +5,9 @@ export default function Project(props) {
   const ref = useRef();
   const inViewport = useIntersection(ref);
 
-  if (inViewport) {
-    console.log("in viewport:", ref.current);
-  }
+  // if (inViewport) {
+  //   console.log("in viewport:", ref.current);
+  // }
 
   return (
     <div
