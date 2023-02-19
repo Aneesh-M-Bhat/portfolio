@@ -16,7 +16,12 @@ function App() {
     <div className="h-screen overflow-scroll snap-y snap-mandatory scrollbar-hide">
       <div className="bg-l1 shadow fixed w-full">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <button className="text-xl font-bold ">Portfolio</button>
+          <button
+            className="text-xl font-bold "
+            onClick={() => goToSection("home")}
+          >
+            Portfolio
+          </button>
           {/* <div className="md:hidden">Fix</div> */}
           <ul className="flex items-center">
             {texts.navs.map((item, index) => (

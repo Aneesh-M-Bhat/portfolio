@@ -1,6 +1,5 @@
 {
   "navs": [
-    { "name": "Home", "id": "home" },
     { "name": "About", "id": "about" },
     { "name": "Skills", "id": "skills" },
     { "name": "Projects", "id": "projects" }
@@ -183,7 +182,10 @@
   ],
   "aboutDesc": "I'm a developer who loves exploring new domains & is avidly interested in technology. My primary language of choice is JavaScript for development & Java for Competitive Programming. I enjoy solving coding problems a lot. I'm also someone who loves craft, drawing, reading books, playing games & food. I'm always up for exploring anything new. My interests are ever-expanding. Hit me up if you want someone to do any project or just have a talk.",
   "additional": {
-    "navs": { "name": "Contact", "id": "contact" },
+    "navs": [
+      { "name": "Home", "id": "home" },
+      { "name": "Contact", "id": "contact" }
+    ],
     "aboutDesc": "I am skilled in creating user interfaces, layouts, and designs using HTML, CSS, and JavaScript, as well as creating server-side logic, database management, and APIs using programming languages and frameworks such as PHP, Ruby, Python, Java, Django, Laravel, or Node.js. I have also developed mobile applications for iOS or Android devices using programming languages like Swift, Kotlin, or Java. As a freelancer, I have worked on various projects for clients and am capable of working independently to manage projects from start to finish."
   }
 }
