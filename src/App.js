@@ -3,11 +3,12 @@ import { useState } from "react";
 import Skill from "./components/Skill";
 import H2 from "./components/H2";
 import texts from "./texts.json";
+import { Section } from "./components/Section";
 
 function App() {
   const navButtons = (content) => {
     return (
-      <button className="text-gray-800 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+      <button className="hover:text-gray-400 px-3 py-2 font-medium">
         {content}
       </button>
     );
@@ -16,14 +17,10 @@ function App() {
 
   return (
     <div>
-      <div className="bg-white shadow">
-        <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
-          <div className="flex justify-between items-center">
-            <button className="text-xl font-bold text-gray-800">
-              Portfolio
-            </button>
-            {/* <div className="md:hidden">Fix</div> */}
-          </div>
+      <div className="bg-white shadow fixed w-full">
+        <div className="container mx-auto px-6 text-gray-800 py-3 flex justify-between items-center">
+          <button className="text-xl font-bold ">Portfolio</button>
+          {/* <div className="md:hidden">Fix</div> */}
           <ul className="hidden md:flex md:items-center">
             {texts.navs.map((item, index) => (
               <li key={index}>{navButtons(item.name, item.link)}</li>
@@ -31,30 +28,40 @@ function App() {
           </ul>
         </div>
       </div>
-      <header className="bg-gray-100">
-        <div className="container mx-auto px-6 py-20">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            Hi, I'm Aneesh M Bhat
-          </h1>
-          <p className="text-lg text-gray-700 mb-8">
-            I am a freelance developer with expertise in frontend development,
-            backend development, and mobile app development.
-          </p>
-          <button className="bg-gray-800 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-700">
-            View Projects
-          </button>
-        </div>
-      </header>
+      <Section
+        bg="bg-gray-100"
+        getContent={() => (
+          <div className="container m-auto px-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
+              Hi, I'm Aneesh M Bhat
+            </h1>
+            <p className="text-lg text-gray-700 mb-8">
+              I'm a Freelance Developer with expertise in Frontend Development,
+              Backend Development, and Mobile App Development.
+            </p>
+            {/* <button className="bg-gray-800 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-700">
+              View Projects
+            </button> */}
+          </div>
+        )}
+      />
+      <Section
+        bg="bg-blue-100"
+        getContent={() => (
+          <div className="container m-auto px-6">
+            <H2 title="About Me" />
+            <p className="text-lg text-gray-700 mb-8 px-1">{texts.aboutDesc}</p>
+            <H2 title="Skills" />
+            <div className="text-lg text-gray-700 mb-8 flex flex-wrap">
+              {texts.skills.map((item, index) => (
+                <Skill key={index} title={item.title} />
+              ))}
+            </div>
+          </div>
+        )}
+      />
       <div className="container mx-auto px-6 py-10">
-        <H2 title="About Me" />
-        <p className="text-lg text-gray-700 mb-8 px-1">{texts.aboutDesc}</p>
-        <H2 title="Skills" />
-        <div className="text-lg text-gray-700 mb-8 flex flex-wrap">
-          {texts.skills.map((item, index) => (
-            <Skill key={index} title={item.title} />
-          ))}
-        </div>
-        <H2 title="Education" />
+        {/* <H2 title="Education" />
         <div className="text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
           <table className="w-full">
             <tbody>
@@ -96,7 +103,7 @@ function App() {
               </tr>
             </tbody>
           </table>
-        </div>
+        </div> */}
         <H2
           title="My Projects"
           setSeeAll={setSeeAll}
@@ -114,10 +121,7 @@ function App() {
       </div>
       <footer className="bg-gray-800 text-white">
         <div className="container mx-auto px-6 py-4">
-          <p className="text-center text-xs">
-            {/* &copy; 2023 Aneesh M Bhat. All rights reserved. */}
-            DEVELOPEDBYAMB
-          </p>
+          <p className="text-center text-xs">DEVELOPEDBYAMB</p>
         </div>
       </footer>
     </div>
