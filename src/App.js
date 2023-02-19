@@ -27,10 +27,10 @@ function App() {
         bg="bg-gray-100 "
         getContent={() => (
           <div className="container m-auto px-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-2">
               Hi, I'm Aneesh M Bhat
             </h1>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-sm md:text-lg text-gray-700 mb-8">
               I'm a Freelance Developer with expertise in Frontend Development,
               Backend Development, and Mobile App Development.
             </p>
@@ -45,7 +45,9 @@ function App() {
         getContent={() => (
           <div className="container m-auto px-6">
             <H2 title="About Me" />
-            <p className="text-lg text-gray-700 mb-8 px-1">{texts.aboutDesc}</p>
+            <p className="text-sm md:text-lg text-gray-700 mb-8 px-1">
+              {texts.aboutDesc}
+            </p>
           </div>
         )}
       />
@@ -54,7 +56,7 @@ function App() {
         getContent={() => (
           <div className="container m-auto px-6">
             <H2 title="Experience" />
-            <div className="text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
+            <div className="text-sm md:text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
               <table className="w-full">
                 <tbody>
                   <tr>
@@ -93,7 +95,7 @@ function App() {
               </table>
             </div>
             <H2 title="Education" />
-            <div className="text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
+            <div className="text-sm md:text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
               <table className="w-full">
                 <tbody>
                   <tr>
