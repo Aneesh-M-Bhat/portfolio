@@ -1,9 +1,9 @@
 export default function Project(props) {
   return (
-    <div className=" flex-none w-80  px-4 mb-8">
+    <div className=" flex-none w-sml md:w-mid lg:w-lrg px-4 mb-8 snap-start ">
       <button
         disabled
-        className="bg-white rounded-lg w-full shadow-lg overflow-hidden hover:opacity-50"
+        className="bg-l3 rounded-lg w-full shadow-lg overflow-hidden hover:opacity-50"
       >
         {/* <img
           className="w-full h-56 object-cover object-center"
@@ -14,10 +14,8 @@ export default function Project(props) {
           Features
         </div> */}
         <div className="p-4">
-          <h3 className="text-gray-800 font-bold text-xl mb-2">
-            {props.title}
-          </h3>
-          <ul className="text-gray-700 text-sm text-left">
+          <h3 className=" font-bold text-xl md:text-2xl mb-2">{props.title}</h3>
+          <ul className=" font-medium text-sm md:text-base text-left">
             {props.about.map((item, index) => (
               <li key={index}># {item}</li>
             ))}

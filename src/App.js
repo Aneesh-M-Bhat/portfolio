@@ -1,21 +1,30 @@
 import Project from "./components/Project";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Skill from "./components/Skill";
 import H2 from "./components/H2";
 import texts from "./texts.json";
 import { Section } from "./components/Section";
 
 function App() {
+  const goToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="h-screen overflow-scroll snap-y snap-mandatory scrollbar-hide">
-      <div className="bg-white shadow fixed w-full">
-        <div className="container mx-auto px-6 text-gray-800 py-3 flex justify-between items-center">
+      <div className="bg-l1 shadow fixed w-full">
+        <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <button className="text-xl font-bold ">Portfolio</button>
           {/* <div className="md:hidden">Fix</div> */}
-          <ul className="hidden md:flex md:items-center">
+          <ul className="flex items-center">
             {texts.navs.map((item, index) => (
               <li key={index}>
-                <button className="hover:text-gray-400 px-3 py-2 font-medium">
+                <button
+                  className="hover:text-gray-400 px-2 lg:px-3 font-medium"
+                  onClick={() => goToSection(item.id)}
+                >
                   {item.name}
                 </button>
               </li>
@@ -24,13 +33,14 @@ function App() {
         </div>
       </div>
       <Section
-        bg="bg-gray-100 "
+        id="home"
+        bg="bg-l2"
         getContent={() => (
           <div className="container m-auto px-6">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-2">
+            <h1 className="text-3xl md:text-5xl font-bold mb-2">
               Hi, I'm Aneesh M Bhat
             </h1>
-            <p className="text-sm md:text-lg text-gray-700 mb-8">
+            <p className="text-sm md:text-lg mb-8">
               I'm a Freelance Developer with expertise in Frontend Development,
               Backend Development, and Mobile App Development.
             </p>
@@ -41,22 +51,22 @@ function App() {
         )}
       />
       <Section
-        bg="bg-blue-100"
+        id="about"
+        bg="bg-l2"
         getContent={() => (
-          <div className="container m-auto px-6">
+          <div className="container m-auto px-6 ">
             <H2 title="About Me" />
-            <p className="text-sm md:text-lg text-gray-700 mb-8 px-1">
-              {texts.aboutDesc}
-            </p>
+            <p className="text-sm md:text-lg mb-8 px-1">{texts.aboutDesc}</p>
           </div>
         )}
       />
       <Section
-        bg="bg-green-100"
+        id="exp-edu"
+        bg="bg-l2"
         getContent={() => (
           <div className="container m-auto px-6">
             <H2 title="Experience" />
-            <div className="text-sm md:text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
+            <div className="text-sm md:text-lg px-1  mb-8 flex flex-wrap">
               <table className="w-full">
                 <tbody>
                   <tr>
@@ -95,7 +105,7 @@ function App() {
               </table>
             </div>
             <H2 title="Education" />
-            <div className="text-sm md:text-lg px-1 text-gray-700 mb-8 flex flex-wrap">
+            <div className="text-sm md:text-lg px-1  mb-8 flex flex-wrap">
               <table className="w-full">
                 <tbody>
                   <tr>
@@ -141,11 +151,12 @@ function App() {
         )}
       />
       <Section
-        bg="bg-red-100"
+        id="skills"
+        bg="bg-l2"
         getContent={() => (
           <div className="container m-auto px-6">
             <H2 title="Skills" />
-            <div className="text-lg text-gray-700 mb-8 flex flex-wrap">
+            <div className="text-lg mb-8 flex flex-wrap">
               {texts.skills.map((item, index) => (
                 <Skill key={index} title={item.title} />
               ))}
@@ -154,11 +165,12 @@ function App() {
         )}
       />
       <Section
-        bg="bg-yellow-100"
+        id="projects"
+        bg="bg-l2"
         getContent={() => (
-          <div className="container w-full m-auto px-6">
+          <div className="container m-auto px-6">
             <H2 title="My Projects" />
-            <div className="overflow-x-scroll">
+            <div className="overflow-x-scroll overflow-y-scroll scrollbar-hide snap-x snap-mandatory">
               <div className="flex flex-nowrap -mx-3">
                 {texts.projects
                   .filter((i, index) => index % 2 == 0)
@@ -192,7 +204,7 @@ function App() {
           </div>
         )}
       />
-      <footer className="bg-gray-800 text-white fixed bottom-0 w-full">
+      <footer className="bg-l4 fixed bottom-0 w-full">
         <div className="container mx-auto px-6 py-4">
           <p className="text-center text-xs">DEVELOPEDBYAMB</p>
         </div>
