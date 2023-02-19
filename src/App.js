@@ -22,7 +22,7 @@ function App() {
             {texts.navs.map((item, index) => (
               <li key={index}>
                 <button
-                  className="hover:text-gray-400 px-2 lg:px-3 font-medium"
+                  className="hover:text-gray-400 px-1 md:px-2 lg:px-3 font-medium"
                   onClick={() => goToSection(item.id)}
                 >
                   {item.name}
