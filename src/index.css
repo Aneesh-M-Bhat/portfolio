@@ -3,23 +3,12 @@
 @tailwind utilities;
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
-body::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 /* For IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-div::-webkit-scrollbar {
-  display: none;
-}
-
-/* For IE, Edge and Firefox */
-div {
+.scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }

@@ -6,10 +6,8 @@ import texts from "./texts.json";
 import { Section } from "./components/Section";
 
 function App() {
-  const [seeAll, setSeeAll] = useState(false);
-
   return (
-    <div className="h-screen overflow-scroll snap-y snap-mandatory ">
+    <div className="h-screen overflow-scroll snap-y snap-mandatory scrollbar-hide">
       <div className="bg-white shadow fixed w-full">
         <div className="container mx-auto px-6 text-gray-800 py-3 flex justify-between items-center">
           <button className="text-xl font-bold ">Portfolio</button>
@@ -156,18 +154,13 @@ function App() {
       <Section
         bg="bg-yellow-100"
         getContent={() => (
-          <div className="container w-full overflow-scroll m-auto px-6">
-            <H2
-              title="My Projects"
-              setSeeAll={setSeeAll}
-              seeAll={seeAll}
-              count={texts.projects.length}
-            />
-            <div className="flex flex-wrap -mx-3">
-              {texts.projects
-                .filter((i, index) => index % 2 == 0)
-                .map((item, index) => {
-                  if (seeAll || index < 2)
+          <div className="container w-full m-auto px-6">
+            <H2 title="My Projects" />
+            <div className="overflow-x-scroll">
+              <div className="flex flex-nowrap -mx-3">
+                {texts.projects
+                  .filter((i, index) => index % 2 == 0)
+                  .map((item, index) => {
                     return (
                       <Project
                         key={index}
@@ -175,21 +168,24 @@ function App() {
                         about={item.about}
                       />
                     );
-                })}
+                  })}
+              </div>
+              <div className="flex flex-nowrap -mx-3">
+                {texts.projects
+                  .filter((i, index) => index % 2 != 0)
+                  .map((item, index) => {
+                    return (
+                      <Project
+                        key={index}
+                        title={item.name}
+                        about={item.about}
+                      />
+                    );
+                  })}
+              </div>
             </div>
-            <div className="flex flex-wrap -mx-3">
-              {texts.projects
-                .filter((i, index) => index % 2 != 0)
-                .map((item, index) => {
-                  if (seeAll || index < 2)
-                    return (
-                      <Project
-                        key={index}
-                        title={item.name}
-                        about={item.about}
-                      />
-                    );
-                })}
+            <div className="container">
+              <button></button>
             </div>
           </div>
         )}

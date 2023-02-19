@@ -1,6 +1,6 @@
 export default function Project(props) {
   return (
-    <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+    <div className=" flex-none w-80  px-4 mb-8">
       <button
         disabled
         className="bg-white rounded-lg w-full shadow-lg overflow-hidden hover:opacity-50"
