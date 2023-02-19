@@ -14,7 +14,7 @@ module.exports = {
         l1: "#EEE9DA",
       },
       width: {
-        sml: "90%",
+        sml: "85%",
         mid: "60%",
         lrg: "30%",
       },
