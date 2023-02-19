@@ -6,24 +6,21 @@ import texts from "./texts.json";
 import { Section } from "./components/Section";
 
 function App() {
-  const navButtons = (content) => {
-    return (
-      <button className="hover:text-gray-400 px-3 py-2 font-medium">
-        {content}
-      </button>
-    );
-  };
   const [seeAll, setSeeAll] = useState(false);
 
   return (
-    <div className="flex flex-col scrollbar-hide">
+    <div className="h-screen overflow-scroll snap-y snap-mandatory ">
       <div className="bg-white shadow fixed w-full">
         <div className="container mx-auto px-6 text-gray-800 py-3 flex justify-between items-center">
           <button className="text-xl font-bold ">Portfolio</button>
           {/* <div className="md:hidden">Fix</div> */}
           <ul className="hidden md:flex md:items-center">
             {texts.navs.map((item, index) => (
-              <li key={index}>{navButtons(item.name, item.link)}</li>
+              <li key={index}>
+                <button className="hover:text-gray-400 px-3 py-2 font-medium">
+                  {item.name}
+                </button>
+              </li>
             ))}
           </ul>
         </div>
@@ -55,19 +52,7 @@ function App() {
         )}
       />
       <Section
-        getContent={() => (
-          <div className="container m-auto px-6">
-            <H2 title="Skills" />
-            <div className="text-lg text-gray-700 mb-8 flex flex-wrap">
-              {texts.skills.map((item, index) => (
-                <Skill key={index} title={item.title} />
-              ))}
-            </div>
-          </div>
-        )}
-        bg="bg-red-100"
-      />
-      <Section
+        bg="bg-green-100"
         getContent={() => (
           <div className="container m-auto px-6">
             <H2 title="Experience" />
@@ -154,29 +139,62 @@ function App() {
             </div>
           </div>
         )}
-        bg="bg-green-100"
       />
       <Section
-        getContent={() => <div className="container m-auto px-6"></div>}
         bg="bg-red-100"
+        getContent={() => (
+          <div className="container m-auto px-6">
+            <H2 title="Skills" />
+            <div className="text-lg text-gray-700 mb-8 flex flex-wrap">
+              {texts.skills.map((item, index) => (
+                <Skill key={index} title={item.title} />
+              ))}
+            </div>
+          </div>
+        )}
       />
-      <div className="container mx-auto px-6 py-10">
-        <H2
-          title="My Projects"
-          setSeeAll={setSeeAll}
-          seeAll={seeAll}
-          count={texts.projects.length}
-        />
-        <div className="flex flex-wrap -mx-3">
-          {texts.projects.map((item, index) => {
-            if (seeAll || index < 4)
-              return (
-                <Project key={index} title={item.name} about={item.about} />
-              );
-          })}
-        </div>
-      </div>
-      <footer className="bg-gray-800 text-white">
+      <Section
+        bg="bg-yellow-100"
+        getContent={() => (
+          <div className="container w-full overflow-scroll m-auto px-6">
+            <H2
+              title="My Projects"
+              setSeeAll={setSeeAll}
+              seeAll={seeAll}
+              count={texts.projects.length}
+            />
+            <div className="flex flex-wrap -mx-3">
+              {texts.projects
+                .filter((i, index) => index % 2 == 0)
+                .map((item, index) => {
+                  if (seeAll || index < 2)
+                    return (
+                      <Project
+                        key={index}
+                        title={item.name}
+                        about={item.about}
+                      />
+                    );
+                })}
+            </div>
+            <div className="flex flex-wrap -mx-3">
+              {texts.projects
+                .filter((i, index) => index % 2 != 0)
+                .map((item, index) => {
+                  if (seeAll || index < 2)
+                    return (
+                      <Project
+                        key={index}
+                        title={item.name}
+                        about={item.about}
+                      />
+                    );
+                })}
+            </div>
+          </div>
+        )}
+      />
+      <footer className="bg-gray-800 text-white fixed bottom-0 w-full">
         <div className="container mx-auto px-6 py-4">
           <p className="text-center text-xs">DEVELOPEDBYAMB</p>
         </div>

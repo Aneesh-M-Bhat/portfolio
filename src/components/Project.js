@@ -19,7 +19,7 @@ export default function Project(props) {
           </h3>
           <ul className="text-gray-700 text-sm text-left">
             {props.about.map((item, index) => (
-              <li># {item}</li>
+              <li key={index}># {item}</li>
             ))}
           </ul>
           {/* <a

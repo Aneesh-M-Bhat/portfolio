@@ -12,3 +12,14 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+div::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
