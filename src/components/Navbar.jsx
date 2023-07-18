@@ -33,11 +33,15 @@ const Navbar = () => {
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
         {nav && (
-          <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+          <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-c1 to-c3 text-c5">
             {texts.navs.map((link, id) => (
               <li
                 key={id + 1}
-                className="px-4 cursor-pointer capitalize py-6 text-4xl"
+                onClick={() => {
+                  setNav(!nav);
+                  goToSection(link);
+                }}
+                className="px-4 cursor-pointer capitalize py-6 text-3xl"
               >
                 {link}
               </li>

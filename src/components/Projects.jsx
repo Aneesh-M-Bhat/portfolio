@@ -20,7 +20,6 @@ const Projects = () => {
   };
 
   const getBg = (pg) => {
-    console.log(windowDimensions);
     if (windowDimensions.width >= 1024) {
       if (pgNum == texts.projects.length / 2 - 1)
         return pgNum == pg || pgNum - 1 == pg ? "bg-c5" : "bg-c1";
