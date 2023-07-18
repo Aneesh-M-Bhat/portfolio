@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useIntersection = (element) => {
+export function useIntersection(element) {
   const [isVisible, setIsVisible] = useState(false);
   const options = {
     root: null,
@@ -18,4 +18,5 @@ export const useIntersection = (element) => {
   }, [element]);
 
   return isVisible;
-};
+}
+

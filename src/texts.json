@@ -1,5 +1,5 @@
 {
-  "navs": ["home", "about", "portfolio", "experience", "contacts"],
+  "navs": ["home", "about", "experience", "skills", "projects", "contacts"],
   "skills": [
     { "title": "Java" },
     { "title": "JavaScript" },
@@ -176,7 +176,7 @@
       ]
     }
   ],
-  "aboutDesc": "I'm a developer who loves exploring new domains & is avidly interested in technology. My primary language of choice is JavaScript for development & Java for Competitive Programming. I enjoy solving coding problems a lot. I'm also someone who loves craft, drawing, reading books, playing games & food. I'm always up for exploring anything new. My interests are ever-expanding. Hit me up if you want someone to do any project or just have a talk.",
+  "aboutDesc": "I'm a developer who loves exploring new domains & is avidly interested in technology. My primary language of choice is JavaScript for development & Java for Competitive Programming. Currently, I'm working as an associate software engineer at RedHat using technologies like Docker, Kubernetes, Podman, OpenShift, Shell Scripting. I enjoy solving coding problems a lot. I'm also seriously addicted to using React and Tailwind for frontend. I also do love craft, drawing, reading books, playing games, eating as well as cooking food. I'm always up for exploring anything new. My interests are ever-expanding. Hit me up if you want someone to do any project or just have a talk.",
   "additional": {
     "navs": [
       { "name": "Home", "id": "home" },

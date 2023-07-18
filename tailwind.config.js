@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         signature: ["Great Vibes"],
+        home: ["Shadows Into Light"],
       },
       colors: {
         d4: "#0F044C",
@@ -20,11 +21,6 @@ module.exports = {
         c3: "#003566",
         c4: "#ffc300",
         c5: "#ffd60a",
-      },
-      width: {
-        sml: "85%",
-        mid: "60%",
-        lrg: "30%",
       },
     },
   },

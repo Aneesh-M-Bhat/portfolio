@@ -12,8 +12,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center w-full h-20 text-c3 bg-c1 fixed px-4 z-10">
-        <h1 className="text-5xl font-signature ml-2">Aneesh</h1>
+      <div className="flex justify-between items-center w-full h-16 md:h-20 text-c3 bg-c1 fixed px-4 z-10 border-b-2 border-c4">
+        <h1 className="text-4xl md:text-5xl font-signature ml-2">Aneesh</h1>
         <ul className="hidden md:flex">
           {texts.navs.map((link, id) => (
             <li

@@ -4,16 +4,16 @@ import H2 from "./H2";
 
 const Experience = () => {
   return (
-    <Section id="exp-edu" bg="bg-gradient-to-b from-c1 to-c3">
+    <Section id="experience" bg="bg-gradient-to-b from-c1 to-c3">
       <>
         <H2 title="Experience" />
         <div className="text-sm md:text-lg px-1  mb-8 flex flex-wrap">
-          <table className="w-full text-c5 opacity-60">
+          <table className="w-full text-c5 opacity-80">
             <tbody>
               <tr>
                 <td className="w-3/4">
                   <p className="font-bold">
-                    <span className="font-semibold opacity-60">
+                    <span className="font-semibold opacity-80">
                       Associate Software Engineer @
                     </span>
                     <a
@@ -31,7 +31,7 @@ const Experience = () => {
               <tr>
                 <td className="w-3/4">
                   <p className="font-bold">
-                    <span className="font-semibold opacity-60">Intern @</span>
+                    <span className="font-semibold opacity-80">Intern @</span>
                     <a
                       className="hover:underline"
                       href="https://www.redhat.com/en"
@@ -47,7 +47,7 @@ const Experience = () => {
               <tr>
                 <td className="w-3/4">
                   <p className="font-bold">
-                    <span className="font-semibold opacity-60">Intern @</span>
+                    <span className="font-semibold opacity-80">Intern @</span>
                     <a
                       className="hover:underline"
                       href="https://kakunjesoftware.com/"
@@ -63,7 +63,7 @@ const Experience = () => {
               <tr>
                 <td className="w-3/4">
                   <p className="font-bold">
-                    <span className="font-semibold opacity-60">Intern @</span>
+                    <span className="font-semibold opacity-80">Intern @</span>
                     <a
                       className="hover:underline"
                       href="https://www.klientship.com/"
@@ -81,7 +81,7 @@ const Experience = () => {
         </div>
         <H2 title="Education" />
         <div className="text-sm md:text-lg px-1  mb-8 flex flex-wrap">
-          <table className="w-full text-c5 opacity-60">
+          <table className="w-full text-c5 opacity-80">
             <tbody>
               <tr>
                 <td className="w-3/4">
@@ -91,7 +91,7 @@ const Experience = () => {
                   >
                     AJ Institute of Engineering & Technology
                   </a>
-                  <p className="italic opacity-60">
+                  <p className="italic opacity-80">
                     Bachelor of Engineering in Computer Science
                   </p>
                 </td>
@@ -108,7 +108,7 @@ const Experience = () => {
                   >
                     National Institute of Open Schooling
                   </a>
-                  <p className="italic opacity-60">
+                  <p className="italic opacity-80">
                     Senior Secondary Education{" "}
                   </p>
                 </td>
@@ -125,7 +125,7 @@ const Experience = () => {
                   >
                     Mount Carmel Central School
                   </a>
-                  <p className="italic opacity-60">Secondary Education</p>
+                  <p className="italic opacity-80">Secondary Education</p>
                 </td>
                 <td className="w-1/4 text-right">
                   <p> 2016 - 2017</p>
