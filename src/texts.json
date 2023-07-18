@@ -1,9 +1,5 @@
 {
-  "navs": [
-    { "name": "About", "id": "about" },
-    { "name": "Skills", "id": "skills" },
-    { "name": "Projects", "id": "projects" }
-  ],
+  "navs": ["home", "about", "portfolio", "experience", "contacts"],
   "skills": [
     { "title": "Java" },
     { "title": "JavaScript" },

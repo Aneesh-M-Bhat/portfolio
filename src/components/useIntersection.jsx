@@ -9,10 +9,7 @@ export const useIntersection = (element) => {
   };
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      // if (entry.isIntersecting) {
       setIsVisible(entry.isIntersecting);
-      //   observer.unobserve(element.current);
-      // }
     }, options);
 
     element.current && observer.observe(element.current);
